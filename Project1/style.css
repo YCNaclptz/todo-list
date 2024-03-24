@@ -1,0 +1,111 @@
+body{
+    background: linear-gradient(180deg, #c1e1ff 0%, #0085ff 100%);
+    min-height: 100vh;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+
+}
+
+.container{
+    background-color: white;
+    margin: 100px auto;
+    padding: 10px 100px;
+    border-radius: 30px;
+}
+
+.todo-list-title{
+    position: relative;
+    left: -20px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.inner-wrapper{
+    margin: 0 auto;
+    max-width: 350px;
+    width: 100%;
+}
+
+.input-wrapper{
+    border-radius: 20px;
+    background: #eeeff0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 424px;
+}
+
+.input-wrapper input{
+    border: none;
+    background: transparent;
+    flex: 1;
+    outline: none;
+    padding: 10px 20px;
+}
+.input-wrapper button {
+    background-color: #359aff;
+    border: none;
+    color: white;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    padding: 10px 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.list{
+    list-style: none;
+    padding: 0;
+
+}
+.list li{
+    vertical-align: middle;
+    font-weight: 400;
+    padding: 5px;
+    position: relative;
+}
+
+.list li.checked{
+    text-decoration: line-through;
+}
+
+.list li::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(./src/square-regular.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.list li.checked::before{
+    background-image: url(./src/square-check-solid.svg);
+}
+.lisst li::after{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(./src/xmark-solid.svg);
+    background-size: contain;
+}
+.delete{
+    background-image: url(./src/xmark-solid.svg);
+    border-radius: 25px;
+    padding: 5px;
+    background-position: center;
+    background-size: contain;
+    /* object-fit: cover; */
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    display: block;
+    float: right;
+}
+.delete:hover{
+    background-color: #eeeff0;
+    cursor: pointer;
+}
